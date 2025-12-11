@@ -1,1 +1,2 @@
-<img src="./typewriter.svg" width="100%"/>
+
+<img src="./profile.svg" width="100%"/>
