@@ -1,0 +1,70 @@
+<svg viewBox="0 0 1100 200" xmlns="http://www.w3.org/2000/svg">
+
+  <style>
+    .bg { fill: #0f172a; }
+    .text {
+      font-family: "Courier New", monospace;
+      font-size: 20px;
+      fill: #ffffff;
+    }
+
+    /* TYPEWRITER MASKING */
+    @keyframes reveal1 { from { width: 0px; } to { width: 1000px; } }
+    @keyframes reveal2 { from { width: 0px; } to { width: 1000px; } }
+    @keyframes reveal3 { from { width: 0px; } to { width: 1000px; } }
+
+    /* GLOWING CURSOR */
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.1; }
+    }
+
+    #cursor {
+      fill: #4fc3f7;
+      filter: drop-shadow(0 0 6px #4fc3f7);
+      animation: blink 0.8s infinite;
+    }
+  </style>
+
+  <rect class="bg" width="1100" height="200" rx="15"/>
+
+  <!-- Line 1 Mask -->
+  <clipPath id="clip1">
+    <rect id="mask1" x="40" y="50" width="0" height="30">
+      <animate attributeName="width" dur="3s" begin="0s" to="1000" fill="freeze"/>
+    </rect>
+  </clipPath>
+
+  <!-- Line 2 Mask -->
+  <clipPath id="clip2">
+    <rect id="mask2" x="40" y="90" width="0" height="30">
+      <animate attributeName="width" dur="3s" begin="3.3s" to="1000" fill="freeze"/>
+    </rect>
+  </clipPath>
+
+  <!-- Line 3 Mask -->
+  <clipPath id="clip3">
+    <rect id="mask3" x="40" y="130" width="0" height="30">
+      <animate attributeName="width" dur="3.5s" begin="6.7s" to="1000" fill="freeze"/>
+    </rect>
+  </clipPath>
+
+  <!-- Text Line 1 -->
+  <text x="40" y="70" class="text" clip-path="url(#clip1)">
+    Hi, My Name is Msizi, and I’m a Computer Science Graduate passionate about
+  </text>
+
+  <!-- Text Line 2 -->
+  <text x="40" y="110" class="text" clip-path="url(#clip2)">
+    building secure, scalable, and intelligent systems.
+  </text>
+
+  <!-- Text Line 3 -->
+  <text x="40" y="150" class="text" clip-path="url(#clip3)">
+    I work with machine learning, cybersecurity, cloud technologies, and backend development.
+  </text>
+
+  <!-- Glowing Cursor -->
+  <text id="cursor" x="40" y="150" class="text">|</text>
+
+</svg>
