@@ -61,8 +61,12 @@
 
   <!-- Text Line 3 -->
   <text x="40" y="150" class="text" clip-path="url(#clip3)">
-    I work with machine learning, cybersecurity, cloud technologies, and backend development.
+    I work with machine learning, cybersecurity, cloud technologies, and backend 
   </text>
+  <text x= "40" y="150" class= "text" clip-path= "url(#clip4)">
+    development.
+  </text>  
+    
 
   <!-- Glowing Cursor -->
   <text id="cursor" x="40" y="150" class="text">|</text>
